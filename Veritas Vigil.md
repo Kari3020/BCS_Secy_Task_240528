@@ -1,4 +1,5 @@
-Custom Tokenizer Design:
+<b><h1>Custom Tokenizer Design:</h1></b>
+<br>
 Our custom tokenizer is a Python class designed from scratch to handle the quirks and messiness of real-world news text. Its main job is to break up raw text into clean, meaningful tokens that are ready for further analysis
 Key Features:
 1. Lowercasing
@@ -15,8 +16,8 @@ Purpose: The tokenizer splits the text into individual words using a regular exp
 Purpose: Detects and collapses words with three or more repeated characters, which are often used for emphasis in fake or sensational news.
 Example: "sooooo" → "so <REPEAT:5>"
 
-
-Custom Lemmatizer Design
+<hr>
+<b><h1>Custom Lemmatizer Design:</h1></b><br>
 The custom lemmatizer is designed to work hand-in-hand with a simple, rule-based POS tagger. This approach ensures that only appropriate suffixes are removed, preserving the grammatical integrity of the tokens.
 Rule-Based POS Tagger:
 NOUN: Recognized by common noun suffixes (e.g., -tion, -ment, -ness, -ity, -er, -or, -ist)
@@ -34,8 +35,8 @@ Adjectives: Removes comparative/superlative -er, -est if tagged as an adjective.
 Example: "bigger" → "bigg", "fastest" → "fast"
 
 Fallback: If none of the above rules apply, the word is returned unchanged.
-
-Comparison with off‑the‑shelf pipelines:
+<hr>
+<b><h2>Comparison with off‑the‑shelf pipelines:</h2></b><br>
 Off-the-shelf NLP tools like spaCy or NLTK are good at handling regular text and grammar, but they don’t pay special attention to things like stretched words or playful spelling.
 Our custom pipeline, on the other hand, is built to spot these tricks by cleaning up repeated letters and grouping similar words together. This helps us catch the unique patterns often found in fake news.
 While standard tools are easy to use and work well for most text, our custom approach is better for finding the sneaky clues that fake news writers use.
