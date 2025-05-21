@@ -34,3 +34,8 @@ Adjectives: Removes comparative/superlative -er, -est if tagged as an adjective.
 Example: "bigger" → "bigg", "fastest" → "fast"
 
 Fallback: If none of the above rules apply, the word is returned unchanged.
+
+Comparison with off‑the‑shelf pipelines:
+Off-the-shelf NLP tools like spaCy or NLTK are good at handling regular text and grammar, but they don’t pay special attention to things like stretched words or playful spelling.
+Our custom pipeline, on the other hand, is built to spot these tricks by cleaning up repeated letters and grouping similar words together. This helps us catch the unique patterns often found in fake news.
+While standard tools are easy to use and work well for most text, our custom approach is better for finding the sneaky clues that fake news writers use.
